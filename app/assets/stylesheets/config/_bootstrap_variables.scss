@@ -6,11 +6,11 @@
 // General style
 $font-family-sans-serif:  $body-font;
 $headings-font-family:    $headers-font;
-$body-bg:                 $light-gray;
+$body-bg:                 $white;
 $font-size-base: 1rem;
 
 // Colors
-$body-color: $gray;
+$body-color: rgb(113, 113, 114);
 $primary:    #FBD85C;
 $success:    $green;
 $info:       $yellow;
@@ -23,3 +23,6 @@ $border-radius-lg: 2px;
 $border-radius-sm: 2px;
 
 // Override other variables below!
+.col-6 {
+  margin: auto;
+}
