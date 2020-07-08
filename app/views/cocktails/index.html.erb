@@ -1,15 +1,16 @@
 <div class="container">
   <div class="row justify-content-center">
-    <h1>This is all cocktails</h1>
+    <h1>These are our cocktails</h1>
   </div>
   <div class="row justify-content-center">
     <% @cocktails.each do |c| %>
       <div class="col-12 col-md-6 col-lg-3">
         <div class="card-cocktail">
-          <div>
-            <h2><%= c.name %></h2>
-            <%= link_to "View", cocktail_path(c.id) %>
-          </div>
+            <%= image_tag raw "https://source.unsplash.com/1600x900/?"+ c.name.gsub(/\s/,'%20') + "%20cocktail" %>
+            <div class="card-cocktail-infos">
+              <h2><%= c.name %></h2>
+              <%= link_to "View", cocktail_path(c.id) %>
+            </div>
         </div>
       </div>
     <% end  %>
