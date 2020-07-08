@@ -7,5 +7,6 @@ Basic Ruby on Rails app where a user can search and add recipes for their favori
 ## Key learning points:
 * How to create an MVP using Ruby on Rails MVC-OOP Structure
 * How to create and interact with relational databases (PostgreSQL)
+* How to scrape for db seeding / display (JSON & URL)
 * How to integrate 3rd party API (Cloudinary) using Rails Active Storage
 * How to deploy an application to prodution (Heroku)
