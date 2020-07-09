@@ -13,8 +13,12 @@
   </head>
 
   <body>
-    <%= link_to "All Cocktails", cocktails_path %>
-    <%= link_to "Get mixin'", new_cocktail_path %>
+    <% unless action_name == "home" %>
+      <div class="navbar">
+        <%= link_to "All Cocktails", cocktails_path %>
+        <%= link_to "Get mixin'", new_cocktail_path %>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>
