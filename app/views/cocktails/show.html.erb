@@ -1,10 +1,12 @@
-<h1> <%= @cocktail.name %> </h1>
-
-<h2>Ingredients</h2>
-<% @cocktail.doses.each do |d| %>
-<p><%= d.description %> of <%= d.ingredient.name %><%= link_to "Delete", dose_path(d), :method => :delete %>
-<%= link_to "Edit", edit_dose_path(d.id) %>
-</p>
-<% end %>
-
-<%= link_to "Add ingredients", new_cocktail_dose_path(@cocktail)  %>
+<div class="container">
+  <h1> <%= @cocktail.name %> </h1>
+  <h2>Ingredients</h2>
+  <ul>
+  <% @cocktail.doses.each do |d| %>
+  <li><%= d.description %> of <%= d.ingredient.name %> <%= link_to "<i class='far fa-trash-alt'> Delete</i>".html_safe, dose_path(d), :method => :delete %>
+  <%= link_to "<i class='fas fa-pen'> Edit</i>".html_safe, edit_dose_path(d.id) %>
+  </li>
+  <% end %>
+  </ul>
+  <%= link_to "Add Ingredient", new_cocktail_dose_path(@cocktail) %>
+</div>
